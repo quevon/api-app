@@ -1,0 +1,10 @@
+ul{
+    text-align: left;
+    list-style: none;
+}
+ul li {
+    color:gray;
+}
+ul li span{
+    color: #000;
+}

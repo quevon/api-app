@@ -1,0 +1,24 @@
+.button button{
+    --c: black;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3px solid var(--c);
+    border-radius: 15px;
+    width: 10em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 2em;
+    cursor: pointer;
+    background-color: gray;
+    box-shadow: inset 0 0 0 #ffff;
+}
+.button button:hover{
+    box-shadow: inset 200px 0 0 #ffff;
+}
