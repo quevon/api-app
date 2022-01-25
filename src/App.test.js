@@ -1,5 +1,5 @@
-// import { render, screen, waitFor } from '@testing-library/react';
-// import App from './App';
+import { render, screen, waitFor } from '@testing-library/react';
+import App from './App';
 // import {rest} from "msw"; 
 // import {setupServer} from "msw/node";
 // import {dogApi} from "./components/utils/dogapi";
@@ -11,9 +11,16 @@ jest.mock("./components/utils/dogapi");
  beforeEach(() => jest.clearAllMocks());
  it("api responds", async () => {
    api.dogApi.mockRejectedValue({
-       breeds : [{name:"Affenpinscher"}]
-   })
+       breeds : [{name:"Samoyed"}]
+   });
  })
+
+ 
+// test("renders App", async () => {
+//   render(<Image/>)
+//   const element = await screen.findByText("All");
+//   expect(element).toBeInTheDocument();
+// })
 
  
 // it("if api fails", async() => {

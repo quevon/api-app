@@ -7,7 +7,6 @@ import {dogApi} from "./components/utils/dogapi";
 
 
 function App() {
-
   const [cat, setDataCat] = useState([])
   const [dog, setDataDog] = useState([])
 
