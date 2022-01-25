@@ -9,7 +9,6 @@ import {dogApi} from "./components/utils/dogapi";
 function App() {
 
   const [cat, setDataCat] = useState([])
-  const [error, setError] = useState('')
   const [dog, setDataDog] = useState([])
 
   useEffect(() => {

@@ -3,9 +3,6 @@ img{
     width: 200px;
     border-radius: 30px;
     cursor: pointer;
-  }
-img:hover{
-  
 }
 .flex-container{
   display: flex;
