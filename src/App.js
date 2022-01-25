@@ -2,9 +2,14 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Button from "./components/Button";
 import Image from "./components/Image";
+import {catApi} from "./components/utils/catapi";
+import {dogApi} from "./components/utils/dogapi";
+
 
 function App() {
+
   const [cat, setDataCat] = useState([])
+  const [error, setError] = useState('')
   const [dog, setDataDog] = useState([])
 
   useEffect(() => {
@@ -13,16 +18,19 @@ function App() {
   }, []);
 
   const loadDataCat = async () =>{
-    await fetch("https://api.thecatapi.com/v1/images/search")
-    .then(response => response.json())
-    .then(receiveData => setDataCat(receiveData));
+    await catApi()
+    .then(data => {
+      setDataCat(data);
+    })
+    .catch(error => setError(error));
   }
   const loadDataDog = async () =>{
-    await fetch("https://api.thedogapi.com/v1/images/search")
-    .then(response => response.json())
-    .then(receiveData => setDataDog(receiveData));
+    await dogApi()
+    .then(data => {
+      setDataDog(data);
+    })
+    .catch(error => setError(error));
   }
-
   const nextFunction = () => {
     window.location.reload(false);
   }

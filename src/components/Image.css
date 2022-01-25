@@ -2,7 +2,11 @@ img{
     height: 200px;
     width: 200px;
     border-radius: 30px;
+    cursor: pointer;
   }
+img:hover{
+  
+}
 .flex-container{
   display: flex;
   justify-content: center;
@@ -12,8 +16,14 @@ img{
 }
 .cat-flex{
   margin: 10px;
-  
+  background: lightyellow;
+  padding: 10px;
+  border: 1px solid #000;
 }
 .dog-flex{
   margin: 10px;
+  background: lightyellow;
+  padding: 10px;
+  border: 1px solid #000;
 }
+
