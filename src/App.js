@@ -22,14 +22,12 @@ function App() {
     .then(data => {
       setDataCat(data);
     })
-    .catch(error => setError(error));
   }
   const loadDataDog = async () =>{
     await dogApi()
     .then(data => {
       setDataDog(data);
     })
-    .catch(error => setError(error));
   }
   const nextFunction = () => {
     window.location.reload(false);
