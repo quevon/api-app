@@ -25,6 +25,6 @@ const InformationDog = ({dog}) => {
             </li>
         </ul>  
     ) 
-}
+};
 
 export default InformationDog;

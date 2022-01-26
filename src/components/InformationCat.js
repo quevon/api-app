@@ -30,6 +30,6 @@ const InformationCat = ({cat}) => {
             </li>
         </ul>
     ) 
-}
+};
 
 export default InformationCat;
