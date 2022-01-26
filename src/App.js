@@ -15,14 +15,14 @@ function App() {
     loadDataDog();
   }, []);
 
-  const loadDataCat = async () =>{
-    await catApi()
+  const loadDataCat = () =>{
+      catApi()
     .then(data => {
       setDataCat(data);
     })
   }
-  const loadDataDog = async () =>{
-    await dogApi()
+  const loadDataDog = () =>{
+    dogApi()
     .then(data => {
       setDataDog(data);
     })

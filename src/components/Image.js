@@ -21,8 +21,7 @@ const Image = ({cat,dog}) => {
                     <InformationDog dog={dog}/>  
                 </div>
             </div>     
-        </div>
-           
+        </div>       
     )
 }
 

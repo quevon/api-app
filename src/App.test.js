@@ -1,19 +1,18 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import App from './App';
-// import {rest} from "msw"; 
-// import {setupServer} from "msw/node";
-// import {dogApi} from "./components/utils/dogapi";
-import * as api from "./components/utils/dogapi";
+import {catApi} from "./components/utils/catapi";
+import {mockData} from "./components/utils/mockData";
 
+jest.mock("./components/utils/catapi");
 
-jest.mock("./components/utils/dogapi");
-
- beforeEach(() => jest.clearAllMocks());
- it("api responds", async () => {
-   api.dogApi.mockRejectedValue({
-       breeds : [{name:"Samoyed"}]
-   });
- })
+test("renders the app", async () => {
+    catApi.mockImplementation(() => {
+    return mockData;
+  });
+    const {findByText} = render (<App/>);
+    const Name = await findByText("Name: ");
+    expect (Name).toBeInTheDocument();
+});
 
  
 // test("renders App", async () => {
@@ -85,5 +84,3 @@ jest.mock("./components/utils/dogapi");
 //   const element = await screen.findByText("All");
 //   expect(element).toBeInTheDocument();
 // })
-
-
